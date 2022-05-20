@@ -1,0 +1,22 @@
+<html>
+
+	<body>
+		<script src="https://js.zohostatic.com/catalystclient/0.0.1/catalystWebSDK.js"></script>
+		<script>
+			let cred = new catalystCredential();
+			cred.loadFromJSON({
+				project_Id: 343000000118192,
+				zaid: 10018936163
+			});
+			catalyst.initApp(cred, {});
+
+			catalyst.auth.signIn("login");
+		</script>
+
+
+		<div id="login">
+
+		</div>
+	</body>
+
+</html>

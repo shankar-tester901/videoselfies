@@ -1,0 +1,12 @@
+{
+	"name": "video_selfies",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "shankarr+1003@zohocorp.com",
+	"dependencies": {
+		"express": "^4.17.1",
+		"formidable": "^1.2.2",
+		"util": "^0.12.2",
+		"zcatalyst-sdk-node": "latest"
+	}
+}

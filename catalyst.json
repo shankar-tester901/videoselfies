@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "targets": [
+      "video_selfies"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  },
+  "applogic": {
+    "targets": [
+      "video_selfies"
+    ],
+    "ignore": [],
+    "source": "applogic"
+  }
+}

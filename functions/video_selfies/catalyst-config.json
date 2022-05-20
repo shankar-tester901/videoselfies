@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "1_video_selfies",
+		"stack": "node10",
+		"type": "event"
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

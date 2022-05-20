@@ -1,0 +1,6 @@
+{
+    "name": "videoSelfieClient",
+    "version": "0.0.1",
+    "homepage": "login.html",
+    "login_redirect": "index.html"
+}

@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "video_selfies",
+		"stack": "node10",
+		"type": "applogic"
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

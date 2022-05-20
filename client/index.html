@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>sampleApp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css" type="text/css" media="all">
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+        <script src="https://js.zohostatic.com/catalystclient/0.0.1/catalystWebSDK.js"></script>
+        <script>
+            let cred = new catalystCredential();
+            cred.loadFromJSON({
+                project_Id: 343000000118192,
+                zaid: 10018936163
+            });
+            catalyst.initApp(cred, {});
+
+        </script>
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="column" style="background-color:rgb(235, 168, 168);">
+                <video id="video" width="420" height="440">Video stream not available.</video>
+                <button id="startbutton" class="button">Start Recording</button>
+                <button id="stopbutton" class="button">Stop Recording</button><br>
+                <button id="download" disabled>Download</button>
+                <button id="play" disabled>Play</button>
+
+
+
+                <a></a>
+            </div>
+        </div>
+
+        <div class="column" style="background-color:rgb(182, 238, 175);">
+            <p><b>Upload the video here</b></p>
+            <div id=" backgrnd-inner">
+                <form method="POST" enctype="multipart/form-data" id="fileUploadForm">
+                    <label> <input type="file" name="upload_me" />
+                        <input type="submit" value="Submit" id="btnSubmit" /></label>
+                </form>
+            </div>
+        </div>
+        <label>
+
+            <div id="uploadStatus"></div>
+        </label>
+
+        </div>
+
+        <script type="text/javascript">
+            $("#btnSubmit").prop("disabled", false);
+
+            $("#uploadStatus").empty();
+            $("#btnSubmit").click(function (event) {
+                //stop submit the form, we will post it manually.
+                event.preventDefault();
+                $("#logo-title").hide();
+                var form = $('#fileUploadForm')[0];
+                var data = new FormData(form);
+                $("#btnSubmit").prop("disabled", true);
+                invokeUploadFunction(data);
+            });
+
+        </script>
+
+    </body>
+
+</html>
